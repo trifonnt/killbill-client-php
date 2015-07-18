@@ -17,17 +17,19 @@ Example
 
 We have a Killbill instance running at http://cloudkilling.org:8080 you can play with. The following snippet will create an account:
 
+    <?php
     // Path to the library
     require_once(dirname(__FILE__) . '/lib/killbill.php');
     
     // Killbill server
-    Killbill_Client::$serverUrl = "http://cloudkilling.org:8080";
+    Killbill_Client::$serverUrl = "http://localhost:8080";
+    Killbill_Client::$apiPassword = "test";
 
     // Set these values for your particular tenant
     $tenant = new Killbill_Tenant();
     $tenant->apiKey    = 'bob';
     $tenant->apiSecret = 'lazar';
-    
+
     // Unique id for this account
     $externalAccountId = uniqid();
     
@@ -50,6 +52,8 @@ We have a Killbill instance running at http://cloudkilling.org:8080 you can play
     
     // Create it
     $createdAccount = $accountData->create("pierre", "PHP_TEST", "Test for " . $externalAccountId, $tenant->getTenantHeaders());
+
+    var_dump($createdAccount);
 
 
 Requirements
