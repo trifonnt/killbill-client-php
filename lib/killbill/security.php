@@ -22,7 +22,16 @@ class Killbill_Security extends Killbill_UserRolesAttributes {
 
 	public function createUser($user, $reason, $comment, $headers = null) {
 		$response = $this->_create(Killbill_Client::PATH_SECURITY_USERS, $user, $reason, $comment, $headers);
-//		return $this->_getFromResponse('Killbill_SubjectAttributes', $response, $headers);
-		return $this->_getFromResponse('Killbill_Security', $response, $headers);
+
+//		return $this->_getFromResponse('Killbill_SubjectAttributes', $response, $this->getTenantHeaders());
+		return $this->_getFromResponse('Killbill_Security', $response, $this->getTenantHeaders());
+	}
+
+	public function getTenantHeaders()
+	{
+		return array(
+			'X-Killbill-ApiKey: ' . $this->apiKey,
+			'X-Killbill-ApiSecret: ' . $this->apiSecret
+		);
 	}
 }
