@@ -28,6 +28,7 @@ require_once(dirname(__FILE__) . '/killbill/invoice.php');
 require_once(dirname(__FILE__) . '/killbill/overdue.php');
 require_once(dirname(__FILE__) . '/killbill/payment.php');
 require_once(dirname(__FILE__) . '/killbill/payment_method.php');
+require_once(dirname(__FILE__) . '/killbill/security.php');
 require_once(dirname(__FILE__) . '/killbill/subscription.php');
 require_once(dirname(__FILE__) . '/killbill/tag.php');
 require_once(dirname(__FILE__) . '/killbill/tag_definition.php');
