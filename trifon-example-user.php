@@ -20,7 +20,7 @@ $userData->username = "PHP-Test-01";
 $userData->password = "PHP-Test-01";
 $userData->roles = "tenant_user";
 
-var_dump( $userDataData );
+var_dump( $userData );
 
 // Create it
 //                                  ($user, $reason, $comment, $headers = null
