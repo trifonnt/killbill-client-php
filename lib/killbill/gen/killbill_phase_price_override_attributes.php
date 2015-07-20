@@ -26,11 +26,9 @@ require_once(dirname(__FILE__) . '/../resource.php');
  */
 
 
-class Killbill_BundleAttributes extends Killbill_Resource {
-  protected $accountId;
-  protected $bundleId;
-  protected $externalKey;
-  protected $subscriptions;
-  protected $timeline;
-  protected $auditLogs;
+class Killbill_PhasePriceOverrideAttributes extends Killbill_Resource {
+  protected $phaseName;
+  protected $phaseType;
+  protected $fixedPrice;
+  protected $recurringPrice;
 }

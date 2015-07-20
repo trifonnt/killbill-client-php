@@ -43,6 +43,10 @@ class Killbill_Client {
     const PATH_TAGDEFINITIONS = '/tagDefinitions';
     const PATH_TENANTS = '/tenants';
 
+	//@Trifon
+	const PATH_SECURITY = '/security';
+	const PATH_SECURITY_USERS = '/security/users';
+
     public function request($method, $uri, $data = null, $user = null, $reason = null, $comment = null, $additional_headers = null) {
         return $this->_sendRequest($method, $uri, $data, $user, $reason, $comment, $additional_headers);
     }

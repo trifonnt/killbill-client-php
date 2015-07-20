@@ -34,6 +34,10 @@ class Killbill_EventSubscriptionAttributes extends Killbill_Resource {
   protected $product;
   protected $priceList;
   protected $eventType;
+  protected $isBlockedBilling;
+  protected $isBlockedEntitlement;
+  protected $serviceName;
+  protected $serviceStateName;
   protected $phase;
   protected $auditLogs;
 }

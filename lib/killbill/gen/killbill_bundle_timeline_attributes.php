@@ -27,9 +27,9 @@ require_once(dirname(__FILE__) . '/../resource.php');
 
 
 class Killbill_BundleTimelineAttributes extends Killbill_Resource {
-  protected $viewId;
-  protected $bundle;
-  protected $payments;
-  protected $invoices;
-  protected $reasonForChange;
+  protected $accountId;
+  protected $bundleId;
+  protected $externalKey;
+  protected $events;
+  protected $auditLogs;
 }

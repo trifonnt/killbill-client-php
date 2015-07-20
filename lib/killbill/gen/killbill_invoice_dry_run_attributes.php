@@ -37,4 +37,5 @@ class Killbill_InvoiceDryRunAttributes extends Killbill_Resource {
   protected $bundleId;
   protected $effectiveDate;
   protected $billingPolicy;
+  protected $priceOverrides;
 }

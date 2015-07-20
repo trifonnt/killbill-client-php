@@ -35,13 +35,15 @@ class Killbill_SubscriptionAttributes extends Killbill_Resource {
   protected $productName;
   protected $productCategory;
   protected $billingPeriod;
+  protected $phaseType;
   protected $priceList;
+  protected $state;
+  protected $sourceType;
   protected $cancelledDate;
   protected $chargedThroughDate;
   protected $billingStartDate;
   protected $billingEndDate;
   protected $events;
-  protected $newEvents;
-  protected $deletedEvents;
+  protected $priceOverrides;
   protected $auditLogs;
 }

@@ -26,11 +26,7 @@ require_once(dirname(__FILE__) . '/../resource.php');
  */
 
 
-class Killbill_BundleAttributes extends Killbill_Resource {
-  protected $accountId;
-  protected $bundleId;
-  protected $externalKey;
-  protected $subscriptions;
-  protected $timeline;
-  protected $auditLogs;
+class Killbill_RoleDefinitionAttributes extends Killbill_Resource {
+  protected $role;
+  protected $permissions;
 }
