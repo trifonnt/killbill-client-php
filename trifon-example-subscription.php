@@ -12,11 +12,11 @@ $tenant->apiKey    = '';
 $tenant->apiSecret = '';
 
 print('TRIFON');
-var_dump($tenant); //@Trifon
+var_dump( $tenant ); //@Trifon
 
 // Unique id for this account
 $externalAccountId = uniqid();
-var_dump($externalAccountId); //@Trifon
+var_dump( $externalAccountId ); //@Trifon
 
 // Prepare the account data
 $accountData = new Killbill_Account();
@@ -34,9 +34,9 @@ $accountData->phone = "81 53 26 56";
 $accountData->length = 4;
 $accountData->billCycleDay = 12;
 $accountData->timeZone = "UTC";
-var_dump($accountData); //@Trifon
+var_dump( $accountData ); //@Trifon
 
 // Create it
 $createdAccount = $accountData->create("pierre", "PHP_TEST", "Test for " . $externalAccountId, $tenant->getTenantHeaders());
 
-var_dump($createdAccount);
+var_dump( $createdAccount );
