@@ -16,12 +16,14 @@ var_dump( $tenant );
 
 // Prepare the User data
 $tenantData = new Killbill_Tenant();
-$tenantData->username = 'PHP-Test-01';
-$tenantData->password = 'PHP-Test-01';
-
-var_dump( $tenantData );
+//$tenantData->externalKey = '';
+$tenantData->apiKey = 'PHP-Test-01';
+$tenantData->apiSecret = 'PHP-Test-01';
+  
+var_dump( 'Request data = '. $tenantData );
 
 // Create it
-$createdTenant = $tenantData->createTenant('Trifon', 'PHP_TEST', 'PHP client - Tenant creation TEST.', $tenant->getTenantHeaders());
+// create($user, $reason, $comment)
+$createdTenant = $tenantData->create('Trifon', 'PHP_TEST', 'PHP client - Tenant creation TEST.');
 
-var_dump( $createdTenant );
+var_dump( 'CREATED Tenant = '. $createdTenant );
