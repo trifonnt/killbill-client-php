@@ -28,3 +28,6 @@ $createdTenant = $tenantData->create('Trifon', 'PHP_TEST', 'PHP client - Tenant 
 
 print('CREATED Tenant = ');
 var_dump( $createdTenant );
+
+print('  tenantId = ');
+var_dump( $createdTenant->tenantId  );
